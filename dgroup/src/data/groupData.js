@@ -2,6 +2,7 @@ export const timelineData = [
   {
     id: 1,
     year: "2020",
+    img: "/MembersImg/Nestea.jpg",
     title: "The Beginning",
     content: "The foundation for the dgroup was laid. But the dgroup is not officially created just yet.",
     icon: "🌱"

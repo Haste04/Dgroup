@@ -82,50 +82,52 @@ export default function Members() {
       </div>
 
       {selectedMember && (
-      <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in">
-        {/* Increased max-width from lg to 2xl to fit the image on the left */}
-        <div className="bg-[#0A0C10] border border-white/20 rounded-3xl max-w-2xl w-full relative shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col md:flex-row">
+      <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-fade-in">
+        {/* Added 'max-h-[90vh]' and 'overflow-y-auto' 
+          This prevents the modal from disappearing off the top/bottom of mobile screens 
+        */}
+        <div className="bg-[#0A0C10] border border-white/20 rounded-3xl max-w-2xl w-full relative shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-y-auto md:overflow-hidden flex flex-col md:flex-row max-h-[90vh] md:max-h-none">
           
-          {/* 1. LEFT SIDE: MEMBER IMAGE */}
-          <div className="w-full md:w-2/5 h-64 md:h-auto relative border-b md:border-b-0 md:border-r border-white/10">
+          {/* 1. TOP/LEFT SIDE: IMAGE */}
+          <div className="w-full md:w-2/5 aspect-square md:aspect-auto md:h-auto relative border-b md:border-b-0 md:border-r border-white/10 flex-shrink-0">
             <img 
               src={selectedMember.img} 
               alt={selectedMember.name} 
               className="w-full h-full object-cover"
             />
-            {/* Subtle gradient overlay to blend image with the dark theme */}
             <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-[#0A0C10] to-transparent opacity-60" />
           </div>
 
-          {/* 2. RIGHT SIDE: MEMBER DETAILS (Your original code, slightly padded) */}
-          <div className="w-full md:w-3/5 p-8 relative">
+          {/* 2. BOTTOM/RIGHT SIDE: DETAILS */}
+          <div className="w-full md:w-3/5 p-6 md:p-8 relative">
             <div className={`absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r ${selectedMember.color}`} />
             
+            {/* Close Button - Increased padding for easier tapping on mobile */}
             <button 
               onClick={() => setSelectedMember(null)} 
-              className="absolute top-4 right-6 text-slate-500 hover:text-white text-2xl z-20"
+              className="absolute top-4 right-4 md:right-6 text-slate-500 hover:text-white text-3xl md:text-2xl z-20 p-2"
             >
               ✕
             </button>
 
-            <span className={`font-bold uppercase text-xs tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-r ${selectedMember.color}`}>
+            <span className={`font-bold uppercase text-[10px] md:text-xs tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-r ${selectedMember.color}`}>
               {selectedMember.role}
             </span>
             
-            <h2 className="text-3xl font-bold text-white mb-1">{selectedMember.name}</h2>
-            <p className="text-slate-500 font-mono mb-6 text-sm">
-              AKA: {selectedMember.nickname} | 🎂 {selectedMember.birthday}
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-1 leading-tight">{selectedMember.name}</h2>
+            <p className="text-slate-500 font-mono mb-4 md:mb-6 text-xs md:text-sm">
+              AKA: {selectedMember.nickname} <br className="md:hidden" /> | 🎂 {selectedMember.birthday}
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-5 md:space-y-6">
               <div>
-                <h4 className="text-xs font-bold text-slate-400 uppercase mb-2">Favorite Verse</h4>
-                <p className={`italic text-lg font-serif bg-clip-text text-transparent bg-gradient-to-r ${selectedMember.color} brightness-125`}>
+                <h4 className="text-[10px] font-bold text-slate-500 uppercase mb-1 tracking-wider">Favorite Verse</h4>
+                <p className={`italic text-base md:text-lg font-serif bg-clip-text text-transparent bg-gradient-to-r ${selectedMember.color} brightness-125 leading-relaxed`}>
                   "{selectedMember.verse}"
                 </p>
               </div>
               <div>
-                <h4 className="text-xs font-bold text-slate-400 uppercase mb-2">Brief Bio</h4>
+                <h4 className="text-[10px] font-bold text-slate-500 uppercase mb-1 tracking-wider">Brief Bio</h4>
                 <p className="text-slate-300 leading-relaxed text-sm">
                   {selectedMember.bio || "No bio added yet."}
                 </p>
