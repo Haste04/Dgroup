@@ -19,7 +19,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0A0C10] text-white flex">
+    <div className="min-h-screen bg-[#0A0C10] text-white flex overflow-x-hidden">
       {/* Main Content Area */}
       <main className="flex-1">
         {currentPage === 'history' && <History />}
@@ -27,9 +27,8 @@ function App() {
         {currentPage === 'members' && <Members />}
       </main>
 
-      {/* Navigation Buttons on the Right Side */}
-      <nav className="w-24 border-l border-white/10 flex flex-col items-center py-10 gap-8 bg-black/40 backdrop-blur-md">
-        
+      {/* Navigation Buttons - Added "fixed right-0" */}
+      <nav className="fixed right-0 w-24 flex flex-col items-center gap-8 bg-black/40 backdrop-blur-md h-fit">
         <NavButton 
           icon="/history.png"     
           tooltip="History"
