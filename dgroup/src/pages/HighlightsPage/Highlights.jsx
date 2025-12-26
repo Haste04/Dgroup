@@ -92,7 +92,7 @@ export default function Highlights() {
       {/* 4. NEW MULTI-PHOTO LIGHTBOX MODAL */}
       {selectedGallery && (
         <div 
-          className="fixed inset-0 flex items-center justify-center bg-black/95 backdrop-blur-xl p-4 md:p-12 pt-24 md:pt-32 animate-fade-in overflow-y-auto"
+          className="fixed inset-0 z-[200] flex items-start justify-center bg-black/95 backdrop-blur-xl p-4 md:p-12 pt-10 md:pt-16 animate-fade-in overflow-y-auto"
           onClick={() => setSelectedGallery(null)}
         >
           {/* Close Button */}
@@ -103,11 +103,11 @@ export default function Highlights() {
             <>
               <button 
                 onClick={prevImage}
-                className="absolute left-4 md:left-10 z-[210] w-14 h-14 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/20 text-white text-4xl transition-all"
+                className="absolute left-4 md:left-10 z-[210] mt-50 w-14 h-14 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/20 text-white text-4xl transition-all"
               >‹</button>
               <button 
                 onClick={nextImage}
-                className="absolute right-4 md:right-10 z-[210] w-14 h-14 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/20 text-white text-4xl transition-all"
+                className="absolute right-4 md:right-10 z-[210] mt-50 w-14 h-14 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/20 text-white text-4xl transition-all"
               >›</button>
             </>
           )}

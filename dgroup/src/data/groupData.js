@@ -5,17 +5,15 @@ export const timelineData = [
     img: "/MembersImg/Nestea.jpg",
     title: "The Beginning",
     content: "The foundation for the dgroup was laid. But the dgroup is not officially created just yet.",
-    icon: "🌱"
   },
   {
     id: 2,
-    year: "2024",
-    title: "First Mountain Retreat",
-    content: "We spent 3 days in prayer and hiking at Mt. Pulag.",
-    icon: "🏔️"
+    year: "2025",
+    title: "And now the present...",
+    content: "The dgroup's journey with God continues as we create more memories together.",
   }
 ];
-
+.
 export const highlightsData = [
   {
     id: 1,
