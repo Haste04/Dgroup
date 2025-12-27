@@ -1,12 +1,13 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { highlightsData } from '../../data/groupData'
 
 export default function Highlights() {
   const [activeYear, setActiveYear] = useState('ALL')
-  
-  // 1. New State: Track the entire highlight object and the current photo index
   const [selectedGallery, setSelectedGallery] = useState(null)
   const [currentIndex, setCurrentIndex] = useState(0)
+
+  // 1. State to remember the user's scroll position
+  const [scrollPosition, setScrollPosition] = useState(0)
 
   const years = ['2020', '2021', '2022', '2023', '2024', '2025', '2026']
 
@@ -14,20 +15,36 @@ export default function Highlights() {
     ? highlightsData 
     : highlightsData.filter(item => item.date.includes(activeYear))
 
-  // 2. Navigation Handlers
+  // 2. Teleportation: Save position and jump to top
+  const handleOpenGallery = (item) => {
+    setScrollPosition(window.scrollY) // Record current spot
+    setSelectedGallery(item)
+    setCurrentIndex(0)
+    window.scrollTo({ top: 0, behavior: 'instant' }) // Teleport to top
+  }
+
+  // 3. Reverse Teleportation: Return to original spot
+  const handleCloseGallery = () => {
+    setSelectedGallery(null)
+    // Small timeout ensures the DOM updates before we scroll back
+    setTimeout(() => {
+      window.scrollTo({ top: scrollPosition, behavior: 'instant' })
+    }, 10)
+  }
+
   const nextImage = (e) => {
-    e.stopPropagation(); // Prevents clicking the image from closing the modal
-    setCurrentIndex((prev) => (prev + 1) % selectedGallery.images.length);
-  };
+    e.stopPropagation()
+    setCurrentIndex((prev) => (prev + 1) % selectedGallery.images.length)
+  }
 
   const prevImage = (e) => {
-    e.stopPropagation();
-    setCurrentIndex((prev) => (prev - 1 + selectedGallery.images.length) % selectedGallery.images.length);
-  };
+    e.stopPropagation()
+    setCurrentIndex((prev) => (prev - 1 + selectedGallery.images.length) % selectedGallery.images.length)
+  }
 
   return (
     <div className="p-10 max-w-5xl mx-auto animate-fade-in">
-      {/* Header Section (Unchanged) */}
+      {/* Header Section */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
         <div>
           <h1 className="text-5xl font-extrabold text-white mb-2">Highlights</h1>
@@ -50,30 +67,19 @@ export default function Highlights() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {filteredHighlights.map((item) => (
           <div key={item.id} className="group overflow-hidden rounded-3xl bg-slate-900/50 border border-white/10 hover:border-cyan-500/50 transition-all duration-500">
-            {/* 3. Updated Click Logic: Pass the whole item and set index to 0 */}
             <div 
               className="h-48 overflow-hidden bg-slate-800 cursor-zoom-in relative"
-              onClick={() => {
-                if (item.images?.length > 0) {
-                  setSelectedGallery(item);
-                  setCurrentIndex(0);
-                }
-              }}
+              onClick={() => handleOpenGallery(item)} // Trigger Teleport
             >
-              {item.images?.[0] ? (
+              {item.images?.[0] && (
                 <>
                   <img src={item.images[0]} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                  {/* Indicator if there are multiple photos */}
                   {item.images.length > 1 && (
                     <div className="absolute bottom-3 right-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-[10px] text-white border border-white/10">
                       + {item.images.length - 1} more
                     </div>
                   )}
                 </>
-              ) : (
-                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-black">
-                  <span className="text-slate-700 font-bold text-4xl opacity-20 uppercase">Memory</span>
-                </div>
               )}
             </div>
 
@@ -89,48 +95,63 @@ export default function Highlights() {
         ))}
       </div>
 
-      {/* 4. NEW MULTI-PHOTO LIGHTBOX MODAL */}
+      {/* MULTI-PHOTO LIGHTBOX MODAL */}
       {selectedGallery && (
-        <div 
-          className="fixed inset-0 z-[200] flex items-start justify-center bg-black/95 backdrop-blur-xl p-4 md:p-12 pt-10 md:pt-16 animate-fade-in overflow-y-auto"
-          onClick={() => setSelectedGallery(null)}
+      /* Main Container */
+      <div className="fixed inset-0 z-[500] bg-black/95 backdrop-blur-xl animate-fade-in">
+        
+        {/* 1. Close Button - Absolute to the whole screen */}
+        <button 
+          className="absolute top-6 right-6 text-white/50 hover:text-white text-5xl z-[700] p-2 transition-colors"
+          onClick={handleCloseGallery}
         >
-          {/* Close Button */}
-          <button className="absolute top-6 right-6 text-white/50 hover:text-white text-4xl z-[210] p-2">✕</button>
-          
-          {/* Navigation Arrows (Only show if more than 1 image) */}
-          {selectedGallery.images.length > 1 && (
-            <>
-              <button 
-                onClick={prevImage}
-                className="absolute left-4 md:left-10 z-[210] mt-50 w-14 h-14 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/20 text-white text-4xl transition-all"
-              >‹</button>
-              <button 
-                onClick={nextImage}
-                className="absolute right-4 md:right-10 z-[210] mt-50 w-14 h-14 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/20 text-white text-4xl transition-all"
-              >›</button>
-            </>
-          )}
+          ✕
+        </button>
 
-          {/* Image & Caption Wrapper */}
-          <div className="relative flex flex-col items-center max-w-7xl w-full">
+        {/* 2. Navigation Buttons - Fixed to screen center, outside the flex container */}
+        {selectedGallery.images.length > 1 && (
+          <>
+            <button 
+              onClick={prevImage}
+              className="fixed left-4 md:left-8 top-75 -translate-y-1/2 z-[700] w-16 h-16 flex items-start justify-center rounded-full bg-white/5 hover:bg-cyan-500 hover:scale-110 text-white text-5xl transition-all border border-white/10 shadow-2xl"
+            >
+              ‹
+            </button>
+            <button 
+              onClick={nextImage}
+              className="fixed right-4 md:right-8 top-75 -translate-y-1/2 z-[700] w-16 h-16 flex items-start justify-center rounded-full bg-white/5 hover:bg-cyan-500 hover:scale-110 text-white text-5xl transition-all border border-white/10 shadow-2xl"
+            >
+              ›
+            </button>
+          </>
+        )}
+
+        {/* 3. Image & Text Container - Handles the "Top of Page" alignment */}
+        <div 
+          className="w-full h-full flex items-start justify-center p-4 md:p-12 pt-10 md:pt-16 overflow-y-auto"
+          onClick={handleCloseGallery}
+        >
+          <div 
+            className="relative flex flex-col items-center max-w-7xl w-full"
+            onClick={(e) => e.stopPropagation()} 
+          >
             <img 
-              key={currentIndex} // Key helps trigger animation on image change
+              key={currentIndex}
               src={selectedGallery.images[currentIndex]} 
               alt="Fullscreen view" 
-              className="max-h-[80vh] max-w-full rounded-lg shadow-2xl animate-zoom-in object-contain"
-              onClick={(e) => e.stopPropagation()} 
+              className="max-h-[80vh] max-w-full rounded-lg shadow-2xl animate-zoom-in object-contain border border-white/10"
             />
             
             <div className="mt-6 text-center">
-              <h3 className="text-white text-xl font-bold">{selectedGallery.title}</h3>
-              <p className="text-cyan-400 font-mono text-sm mt-1">
+              <h3 className="text-white text-2xl font-bold">{selectedGallery.title}</h3>
+              <p className="text-cyan-400 font-mono text-lg mt-1">
                 {currentIndex + 1} / {selectedGallery.images.length}
               </p>
             </div>
           </div>
         </div>
-      )}
+      </div>
+    )}
     </div>
   )
 }

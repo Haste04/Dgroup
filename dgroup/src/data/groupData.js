@@ -2,18 +2,169 @@ export const timelineData = [
   {
     id: 1,
     year: "2020",
-    img: "/MembersImg/Nestea.jpg",
+    img: "/HighlightsImg/First Christmas Party 3.jpg",
     title: "The Beginning",
-    content: "The foundation for the dgroup was laid. But the dgroup is not officially created just yet.",
+    content: "The foundation for the dgroup was laid through the first Christmas Party. But the dgroup is not officially created just yet.",
   },
   {
     id: 2,
+    year: "2021",
+    img: "/HighlightsImg/Badian Trip 5.jpg",
+    title: "Tip of the Iceberg",
+    content: "We officially met with Kuya Nestea for the first time during our trip to Badian. We went around South and bonded as a group. And we stopped by a Korean restaurant for lunch.",
+  },
+  {
+    id: 3,
+    img: "/HighlightsImg/First Coup Game 2.jpg",
+    title: "The Warmth within Deception",
+    content: "The parents had a dgroup meeting at Kuya Nestea's coffee shop. We really bonded over the game of coup during this time",
+  },
+  {
+    id: 4,
+    img: "/HighlightsImg/Second Christmas Party.jpg",
+    title: "Boljoon Christmas Party",
+    content: "We had our second Christmas Party in Boljoon (shortly before Odette). And, it was the first time Ayah was joining us!",
+  },
+  {
+    id: 5,
+    year: "2022",
+    img: "/HighlightsImg/Third Christmas Party.jpg",
+    title: "Third Christmas Party",
+    content: "After the parents served in Church, we had our third Christmas Party! We exchanged gifts in the parking lot because it was raining",
+  },
+  {
+    id: 6,
+    year: "2023",
+    img: "/HistoryImg/Reformative Year.jpg",
+  },
+  {
+    img: "/HistoryImg/Reformative Year 2.jpg",
+    title: "Transition and Reformative Year - The Transition from the OG to the Official Dgroup",
+    content: "Hard Year for the group because of the sudden departure of two parents. As a result, the Christmas Party of this year was canceled. But through God's grace, this year was used by God to reform and prepare the people for greater things ahead.",
+  },
+  {
+    id: 7,
+    year: "2024",
+    img: "/HistoryImg/First Dgroup Meeting after 2023.jpg",
+    title: "First Meeting of the Year",
+    content: "It was the first meeting of the year and the group really reflected on what has transpired in 2023. Joining this meeting will be a new member of the group...",
+  },
+  {
+    id: 8,
+    img: "/HistoryImg/Rich Joy Join.jpg",
+    title: "RichJoy Joins the Group",
+    content: "The future Dgroup plant continues it's growth as RichJoy joins the group. The budding plant starts to grow back stronger",
+  },
+  {
+    title: "Afterwards..."
+  },
+  {
+    id: 9,
+    img: "/HistoryImg/Maxine Join.jpg",
+    title: "Maxine Joins the Group",
+    content: "The future Dgroup plant continues to bud as Maxine joins the group. With a new member, the group starts to take shape into its present form",
+  },
+  {
+    id: 10,
+    img: "/HistoryImg/Official Creation.jpg",
+    title: "The Official Creation of the Dgroup",
+    content: "After Maxine joined, it is generally agreed upon that this was the time that the Dgroup became official. God has been faithful in bringing us together",
+  },
+  {
+    id: 11,
+    img: "/HistoryImg/Precious Joins.png",
+    title: "Precious Joins the Dgroup",
+    content: "The Dgroup continues to grow as Precious joins the group. God's plan for the Dgroup is unfolding",
+  },
+  {
+    img: "/HistoryImg/Prince Joins.jpg",
+    title: "Prince Joins the Dgroup",
+    content: "The Dgroup continues to grow as Prince joins the group. The Dgroup continues to grow with God at its center",
+  },
+  {
+    id: 13,
+    img: "/HighlightsImg/Argao Trip 10.jpg",
+  },
+  {
+    img: "/HighlightsImg/Argao Trip 16.jpg",
+    title: "The Beach and the Mountain Escapade",
+    content: "The Dgroup's first ever outdoor trip together to Argao. Memories were made as we hiked the mountain and relaxed at the beach.",
+  },
+  {
+    id: 14,
+    img: "/HistoryImg/Phil Joins.jpg",
+    title: "Boss Phil Joins the Dgroup",
+    content: "Boss Phil finally graduates from the kids table and joins the Dgroup. He became the youngest of the Dgroup",
+  },
+  {
+    id: 15,
+    img: "/HighlightsImg/Fourth Christmas Party 3.jpg",
+    title: "Fourth Christmas Party",
+    content: "We had our fourth Christmas Party in Catmon. It was a fun and memorable night",
+  },
+  {
+    id: 16,
     year: "2025",
-    title: "And now the present...",
-    content: "The dgroup's journey with God continues as we create more memories together.",
+    img: "/HighlightsImg/First Sleepover.jpg",
+    title: "First Sleepover",
+    content: "The Dgroup(-1) had their first ever sleepover at Kuya Nestea's house. It was so cozy that we have to stay for another night! P.S Lami ang steak",
+  },
+  {
+    id: 17,
+    year: "2025",
+    img: "/HistoryImg/Josiah Joins.jpg",
+    title: "Josiah Joins the Server",
+    content: "The Dgroup plant continues to grow well as Josiah joins the Dgroup. The Dgroup continues to grow with God at the forefront",
+  },
+  {
+    id: 18,
+    img: "/HighlightsImg/Second Sleepover.jpg",
+    title: "Second Sleepover",
+    content: "The Dgroup had their second ever sleepover at Kuya Nestea's house. The plan was made on the spot but it was worth it",
+  },
+  {
+    id: 19,
+    img: "/HighlightsImg/Second Argao Trip 2.jpg",
+    title: "Second Trip Down South",
+    content: "It was supposed to be canceled because of heavy rains but the plan was pushed through because majority of people decided to go. This was the first outdoor travel trip that Josiah joined after becoming part of the Dgroup",
+  },
+  {
+    id: 20,
+    img: "/HighlightsImg/Dgroup Serve.jpg",
+    title: "First United Service",
+    content: "First service as a Dgroup during Elevate Sunday. We used our talent and skills for God's glory",
+  },
+  {
+    id: 21,
+    img: "/HighlightsImg/18th Birthday.jpg",
+    title: "The Dual Birthdays at the Golden Peak",
+    content: "We celebrated the birthdays of two important people in our Dgroup: Precious and Phil. A lot of unexpected events happened but the event overall was a fantastic one",
+  },
+  {
+    id: 22,
+    img: "/HistoryImg/Micky Joins.png",
+    title: "The Mouse joins the Dgroup",
+    content: "The Dgroup plant reaches its current form by adding a new memeber to the Dgroup, Micky. She became our most recent person to be part of the Dgroup",
+  },
+  {
+    id: 23,
+    img: "/HighlightsImg/Third Elevate Sunday.jpg",
+    title: "United Third Elevate Sunday",
+    content: "The Dgroup serves its third Elevate Sunday. Kuya Nestea decided that the Dgroup should, for the first time, serve as dancers during praise and worship. This is the first time Micky is serving with the Dgroup",
+  },
+  {
+    id: 24,
+    img: "/HighlightsImg/Fifth Christmas Party Profile.jpg",
+    title: "Fifth Christmas Party",
+    content: "We had our Fifth Christmas Party at Danao. Cheers and praying for more Christmas Parties to come",
+  },
+  {
+    id: 25,
+    title: "And now the present... ",
+    content: "The Dgroup's journey with God continues as we create more memories together. ✞",
   }
 ];
-.
+
 export const highlightsData = [
   {
     id: 1,
@@ -28,6 +179,29 @@ export const highlightsData = [
   },
   {
     id: 2,
+    title: "Badian Trip",
+    date: "June 2021",
+    category: "Travel",
+    description: "Round trip around South. First time connecting with Kuya Nestea",
+    images: ["/HighlightsImg/Badian Trip 5.jpg",
+      "/HighlightsImg/Badian Trip.jpg",
+      "/HighlightsImg/Badian Trip 2.jpg",
+      "/HighlightsImg/Badian Trip 3.jpg",
+      "/HighlightsImg/Badian Trip 4.jpg",
+    ]
+  },
+  {
+    id: 3,
+    title: "First Coup Game",
+    date: "Mid 2021",
+    category: "Fun",
+    description: "First Coup Game at Kuya Nestea's Coffee Shop",
+    images: ["/HighlightsImg/First Coup Game.jpg",
+        "/HighlightsImg/First Coup Game 2.jpg",
+    ]
+  },
+  {
+    id: 4,
     title: "Second Christmas Party",
     date: "December 2021",
     category: "Celebration",
@@ -40,7 +214,7 @@ export const highlightsData = [
     ]
   },
   {
-    id: 3,
+    id: 5,
     title: "Third Christmas Party",
     date: "December 2022",
     category: "Celebration",
@@ -52,7 +226,7 @@ export const highlightsData = [
     ]
   },
    {
-    id: 4,
+    id: 6,
     title: "Argao Trip",
     date: "September 2024",
     category: "Travel",
@@ -72,10 +246,11 @@ export const highlightsData = [
       "/HighlightsImg/Argao Trip 13.jpg",
       "/HighlightsImg/Argao Trip 14.jpg",
       "/HighlightsImg/Argao Trip 15.jpg",
+      "/HighlightsImg/Argao Trip 16.jpg",
     ]
   },
   {
-    id: 5,
+    id: 7,
     title: "Fourth Christmas Party",
     date: "December 2024",
     category: "Celebration",
@@ -83,11 +258,10 @@ export const highlightsData = [
     images: ["/HighlightsImg/Fourth Christmas Party.jpg",
       "/HighlightsImg/Fourth Christmas Party 2.jpg",
       "/HighlightsImg/Fourth Christmas Party 3.jpg",
-      "/HighlightsImg/Fourth Christmas Party 4.jpg",
     ]
   },
   {
-    id: 6,
+    id: 8,
     title: "First Sleepover",
     date: "December 2024",
     category: "Celebration",
@@ -101,7 +275,31 @@ export const highlightsData = [
     ]
   },
   {
-    id: 7,
+    id: 9,
+    title: "Second Sleepover",
+    date: "May 2025",
+    category: "Celebration",
+    description: "Second Sleepover at Kuya Nestea's House",
+    images: ["/HighlightsImg/Second Sleepover.jpg",
+      "/HighlightsImg/Second Sleepover 2.jpg",
+      "/HighlightsImg/Second Sleepover 3.jpg",
+      "/HighlightsImg/Second Sleepover 4.jpg",
+    ]
+  },
+  {
+    id: 10,
+    title: "Second Argao Trip 2",
+    date: "June 2025",
+    category: "Travel",
+    description: "Second Trip to Argao",
+    images: ["/HighlightsImg/Second Argao Trip.jpg",
+      "/HighlightsImg/Second Argao Trip 2.jpg",
+      "/HighlightsImg/Second Argao Trip 3.jpg",
+      "/HighlightsImg/Second Argao Trip 4.jpg",
+    ]
+  },
+  {
+    id: 11,
     title: "First Time Serving Together as a Dgroup",
     date: "June 2025",
     category: "Service",
@@ -117,7 +315,42 @@ export const highlightsData = [
     ]
   },
   {
-    id: 8,
+    id: 12,
+    title: "Birthday of Precious and Phil",
+    date: "August 2025",
+    category: "Celebration",
+    description: "Celebrating the Brithdays of Precious and Phil",
+    images: ["/HighlightsImg/18th Birthday.jpg",
+      "/HighlightsImg/18th Birthday 2.jpg",
+      "/HighlightsImg/18th Birthday 3.jpg",
+      "/HighlightsImg/18th Birthday 4.jpg",
+      "/HighlightsImg/18th Birthday 5.jpg",
+      "/HighlightsImg/18th Birthday 6.jpg",
+      "/HighlightsImg/18th Birthday 7.jpg",
+    ]
+  },
+  {
+    id: 13,
+    title: "3rd Elevate Service",
+    date: "November 2025",
+    category: "Service",
+    description: "Serving as One Dgroup during Elevate Sunday for the Third Time",
+    images: ["/HighlightsImg/Third Elevate Sunday.jpg",
+        "/HighlightsImg/Third Elevate Sunday 2.jpg",
+        "/HighlightsImg/Third Elevate Sunday 3.jpg",
+        "/HighlightsImg/Third Elevate Sunday 4.jpg",
+        "/HighlightsImg/Third Elevate Sunday 5.jpg",
+        "/HighlightsImg/Third Elevate Sunday 6.jpg",
+        "/HighlightsImg/Third Elevate Sunday 7.jpg",
+        "/HighlightsImg/Third Elevate Sunday 8.jpg",
+        "/HighlightsImg/Third Elevate Sunday 9.jpg",
+        "/HighlightsImg/Third Elevate Sunday 10.jpg",
+        "/HighlightsImg/Third Elevate Sunday 11.jpg",
+        "/HighlightsImg/Third Elevate Sunday 12.jpg",
+    ]
+  },
+  {
+    id: 14,
     title: "Fifth Christmas Party",
     date: "December 2025",
     category: "Celebration",
@@ -143,121 +376,131 @@ export const members = [
     name: "Nestor Rosales Jr.",
     nickname: "Kuya Nestea",
     role: "Dgroup Leader",
-    img: "/MembersImg/Nestea.jpg",
+    img: "/MembersImg/Nestea Yeah.jpg",
     birthday: "December 25",
     verse: "Romans 13:8 - \"Owe no one anything, except to love one another, for whoever loves another has fulfilled the law\"",
-    bio: "Yes",
+    course: "Accountancy", 
+    height: "5’5", 
     color: "from-teal-400 to-emerald-500" 
   },
-
   {
     id: 2,
     name: "Angel",
     nickname: "Ate Angel, Jinggoy",
     role: "Ate of the Dgroup, Brainrot Enthusiast",
+    img: "/MembersImg/Angel.jpg",
     birthday: "August 3",
     verse: "Psalm 73:26 - \"My flesh and my heart may fail, but God is the strength of my heart and my portion forever.\"",
-    bio: "Yes",
-    color: "from-slate-700 via-slate-400 to-slate-600"
+    course: "MedTech", 
+    height: "5’4", 
+    color: "from-slate-600 via-slate-400 to-slate-600"
   },
-
   {
     id: 3,
     name: "Eunice",
     nickname: "Nice, Eunike",
     role: "Food Enthusiast",
-    birthday: "October 3",
+    img: "/MembersImg/Eunice.jpg",
+    birthday: "October 13",
     verse: "Romans 3:23 - \"For all have sinned and fall short of the glory of God.\"",
-    bio: "Yes",
-    color: "from-blue-500 to-cyan-500"
+    course: "Psychology", 
+    height: "5’5", 
+    color: "from-sky-400 to-blue-500"
   },
-  
   {
     id: 4,
     name: "Haggai",
     nickname: "Gai",
-    role: "Cockroach or Soap",
+    role: "Philosopher",
+    img: "/MembersImg/Haggai.png",
     birthday: "September 2",
     verse: "Psalms 16:8 - \"I have set the LORD always before me; because he is at my right hand, I shall not be shaken.\"",
-    bio: "Yes",
+    course: "Computer Science", 
+    height: "5’8", 
     color: "from-green-500 to-emerald-400"
   },
-  
   {
     id: 5,
     name: "Precious",
     nickname: "Presh",
     role: "Food Lover, Salt Lover",
+    img: "/MembersImg/Precious.jpg",
     birthday: "August 31",
     verse: "Jeremiah 29:11 - \"For I know the plans I have for you,\" declares the LORD, \"plans to prosper you and not to harm you, plans to give you hope and a future.\"",
-    bio: "Yes",
+    course: "Money", 
+    height: "5’1", 
     color: "from-red-600 to-rose-400"
   },
-  
   {
     id: 6,
     name: "Prince",
     nickname: "Bro",
     role: "Resident Philosopher",
+    img: "/MembersImg/Prince.jpg",
     birthday: "September 11",
     verse: "Philippians 4:6-7 - \"Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus.\"",
-    bio: "Yes",
+    course: "Senior High School", 
+    height: "5’6", 
     color: "from-slate-700 via-slate-400 to-slate-600"
   },
-  
   {
     id: 7,
     name: "Maxine",
     nickname: "Max",
     role: "Owner of Maxim",
+    img: "/MembersImg/Maxine.jpg",
     birthday: "January 5",
-    verse: "Matthew 28:19",
-    bio: "Yes",
-    color: "from-amber-400 to-orange-500"
+    verse: "Colossians 3:12-13 - \"Therefore, as God's chosen people, holy and dearly loved, clothe yourselves with compassion, kindness, humility, gentleness and patience. Bear with each other and forgive one another if any of you has a grievance against someone. Forgive as the Lord forgave you.\"",
+    course: "Nursing", 
+    height: "5’3", 
+    color: "from-purple-500 to-indigo-600"
   },
-  
   {
     id: 8,
     name: "Rich Joy",
     nickname: "Joy",
     role: "Rich in Joy",
+    img: "/MembersImg/Richjoy.jpg",
     birthday: "February 22",
     verse: "Philippians 4:13 - \"I can do all things through Christ who strengthens me.\"",
-    bio: "Yes",
-    color: "from-blue-500 to-cyan-500"
+    course: "Junior High School", 
+    height: "5’2", 
+    color: "from-indigo-400 to-blue-500"
   },
-  
   {
     id: 9,
     name: "Phil",
     nickname: "Boss Phil",
     role: "Bossing of the Dgroup",
+    img: "/MembersImg/Phil.jpg",
     birthday: "August 30",
-    verse: "Jeremiah 29:11 - \"For I know the plans I have for you,\" declares the LORD, \"plans to prosper you and not to harm you, plans to give you hope and a future.\"",
-    bio: "Yes",
-    color: "from-blue-500 to-cyan-500"
+    verse: "Jeremiah 29:11 - \"For I know the plans I have for you,\" declares the LORD, \"plans to prosper you and not to harm you, plans to give hope and a future.\"",
+    course: "Junior High School", 
+    height: "5’4", 
+    color: "from-blue-500 to-blue-300"
   },
-  
   {
     id: 10,
     name: "Josiah",
     nickname: "Ayah",
-    role: "Dgroup Leader",
+    role: "Manhwa Addict",
+    img: "/MembersImg/Josiah.jpg",
     birthday: "April 12",
     verse: "Psalm 3:5 - \"You are my hiding place; you will protect me from trouble and surround me with songs of deliverance.\"",
-    bio: "Yes",
+    course: "Electrical Engineering", 
+    height: "5’5", 
     color: "from-orange-900 via-amber-800 to-orange-400"
   },
-  
   {
     id: 11,
     name: "Michaela",
     nickname: "Pops",
     role: "Armenian Missionary",
+    img: "/MembersImg/Micky.jpg",
     birthday: "July 16",
-    verse: "Matthew 28:19",
-    bio: "Yes",
-    color: "from-amber-400 to-orange-500"
+    verse: "Matthew 6:33 - \"But seek first his kingdom and his righteousness, and all these things will be given to you as well.\"",
+    course: "Veterinary Medicine", 
+    height: "5’5", 
+    color: "from-pink-200 to-pink-400"
   },
-  
-];
+]
