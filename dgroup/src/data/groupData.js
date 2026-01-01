@@ -144,7 +144,7 @@ export const timelineData = [
     id: 22,
     img: "/HistoryImg/Micky Joins.png",
     title: "The Mouse joins the Dgroup",
-    content: "The Dgroup plant reaches its current form by adding a new memeber to the Dgroup, Micky. She became our most recent person to be part of the Dgroup",
+    content: "The Dgroup plant reaches its current form by adding a new member to the Dgroup, Micky. She became our most recent person to be part of the Dgroup",
   },
   {
     id: 23,
@@ -494,7 +494,7 @@ export const members = [
   {
     id: 11,
     name: "Michaela",
-    nickname: "Pops",
+    nickname: "Miicky",
     role: "Armenian Missionary",
     img: "/MembersImg/Micky.jpg",
     birthday: "July 16",
